@@ -1,1 +1,89 @@
+.tm-syosetu-ui-translations {
+  --tm-syosetu-tag-color: #23527c;
+  --tm-syosetu-tag-color-hover: #153d62;
+  --tm-syosetu-tag-bg: #dcecf8;
+  --tm-syosetu-tag-bg-hover: #e8f4fb;
+  --tm-syosetu-tag-border: #a8c8df;
+  --tm-syosetu-tag-border-hover: #82b0cf;
+  --tm-syosetu-tag-focus: rgba(130, 176, 207, 0.45);
+}
 
+.tm-syosetu-ui-translations.tm-syosetu-adult {
+  --tm-syosetu-tag-color: #5a3a46;
+  --tm-syosetu-tag-color-hover: #4a2d38;
+  --tm-syosetu-tag-bg: #f3dce7;
+  --tm-syosetu-tag-bg-hover: #f8e8ef;
+  --tm-syosetu-tag-border: #d6b2c3;
+  --tm-syosetu-tag-border-hover: #c89db0;
+  --tm-syosetu-tag-focus: rgba(214, 178, 195, 0.45);
+}
+
+.tm-syosetu-ui-translations .p-infotop-data__value .tm-syosetu-tag-badge,
+.tm-syosetu-ui-translations .verticalpdf-info dd .tm-syosetu-tag-badge {
+  display: inline-block;
+  margin: 2px 4px 2px 0;
+  padding: 3px 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--tm-syosetu-tag-color) !important;
+  text-decoration: none !important;
+  background: var(--tm-syosetu-tag-bg);
+  border: 1px solid var(--tm-syosetu-tag-border);
+  border-radius: 999px;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.1s ease,
+    box-shadow 0.15s ease;
+}
+
+.tm-syosetu-ui-translations .p-infotop-data__value .tm-syosetu-tag-badge:hover,
+.tm-syosetu-ui-translations .verticalpdf-info dd .tm-syosetu-tag-badge:hover {
+  color: var(--tm-syosetu-tag-color-hover) !important;
+  background: var(--tm-syosetu-tag-bg-hover);
+  border-color: var(--tm-syosetu-tag-border-hover);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.tm-syosetu-ui-translations .p-infotop-data__value .tm-syosetu-tag-badge:active,
+.tm-syosetu-ui-translations .verticalpdf-info dd .tm-syosetu-tag-badge:active {
+  transform: translateY(0);
+}
+
+.tm-syosetu-ui-translations .p-infotop-data__value .tm-syosetu-tag-badge:focus-visible,
+.tm-syosetu-ui-translations .verticalpdf-info dd .tm-syosetu-tag-badge:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--tm-syosetu-tag-focus);
+}
+
+.tm-syosetu-ui-translations .p-adjust-layout__controller {
+  min-width: 180px;
+}
+
+.tm-syosetu-ui-translations .tm-syosetu-original-illust-toggle {
+  display: none !important;
+}
+
+.tm-syosetu-ui-translations .tm-syosetu-illust-toggle {
+  display: inline-block;
+  min-width: 132px;
+  padding: 3px 8px;
+  color: var(--tm-syosetu-tag-color);
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+  background: var(--tm-syosetu-tag-bg);
+  border: 1px solid var(--tm-syosetu-tag-border);
+  border-radius: 4px;
+}
+
+.tm-syosetu-ui-translations .tm-syosetu-illust-toggle:hover {
+  color: var(--tm-syosetu-tag-color-hover);
+  background: var(--tm-syosetu-tag-bg-hover);
+  border-color: var(--tm-syosetu-tag-border-hover);
+}

@@ -1,4 +1,4 @@
-import { getTranslationMap } from '../i18n/current';
+import { getTranslationMap, translateDynamicText } from '../i18n/current';
 import { isIgnoredTextParent, isInsideNovelBody, setTextIfChanged } from '../utils/dom';
 
 const translations = getTranslationMap();
@@ -25,6 +25,10 @@ export function translateText(root: ParentNode = document): void {
         return NodeFilter.FILTER_ACCEPT;
       }
 
+      if (translateDynamicText(text) !== text) {
+        return NodeFilter.FILTER_ACCEPT;
+      }
+
       return NodeFilter.FILTER_REJECT;
     },
   });
@@ -42,6 +46,12 @@ export function translateText(root: ParentNode = document): void {
     if (exact) {
       const next = current.replace(trimmed, exact);
       setTextIfChanged(node, next);
+      continue;
+    }
+
+    const dynamic = translateDynamicText(current);
+    if (dynamic !== current) {
+      setTextIfChanged(node, dynamic);
     }
   }
 }

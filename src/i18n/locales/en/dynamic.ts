@@ -1,0 +1,61 @@
+import type { DynamicTranslationRule } from '../types';
+import { formatConfiguredDate } from '../../../utils/dateFormat';
+
+export const dynamic: readonly DynamicTranslationRule[] = [
+  {
+    pattern: /作者：/g,
+    replacement: 'Author: ',
+  },
+  {
+    pattern: /最新エピソード掲載日：\s*/g,
+    replacement: 'Latest episode: ',
+  },
+  {
+    pattern: /最終掲載日：\s*/g,
+    replacement: 'Final published: ',
+  },
+  {
+    pattern: /(\d{4})\/(\d{1,2})\/(\d{1,2})/g,
+    replacement: (_match, year, month, day) => formatConfiguredDate(year, month, day),
+  },
+  {
+    pattern: /(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/g,
+    replacement: (_match, year, month, day) => formatConfiguredDate(year, month, day),
+  },
+  {
+    pattern: /エピソード\s*([\d\s～]+)\s*を表示中/g,
+    replacement: 'Showing episodes $1',
+  },
+  {
+    pattern: /連載〔\s*全\s*(\d+)\s*エピソード\s*〕/g,
+    replacement: 'Ongoing [$1 episodes total]',
+  },
+  {
+    pattern: /完結済〔\s*全\s*(\d+)\s*エピソード\s*〕/g,
+    replacement: 'Completed [$1 episodes total]',
+  },
+  {
+    pattern: /連載\(\s*全\s*(\d+)\s*エピソード\s*\)/g,
+    replacement: 'Ongoing ($1 episodes total)',
+  },
+  {
+    pattern: /完結済\(\s*全\s*(\d+)\s*エピソード\s*\)/g,
+    replacement: 'Completed ($1 episodes total)',
+  },
+  {
+    pattern: /全\s*(\d+)\s*エピソード/g,
+    replacement: '$1 episodes total',
+  },
+  {
+    pattern: /(\d[\d,]*)\s*件/g,
+    replacement: '$1',
+  },
+  {
+    pattern: /(\d[\d,]*)\s*文字/g,
+    replacement: '$1 characters',
+  },
+  {
+    pattern: /(\d[\d,]*)\s*pt/g,
+    replacement: '$1 pt',
+  },
+];

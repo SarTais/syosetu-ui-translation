@@ -1,8 +1,14 @@
 import css from './styles.css?inline';
+import { isAdultHost } from '../i18n/current';
 
 const STYLE_ID = 'tm-syosetu-ui-translations-styles';
+const ROOT_CLASS = 'tm-syosetu-ui-translations';
+const ADULT_ROOT_CLASS = 'tm-syosetu-adult';
 
 export function installStyles(): void {
+  document.documentElement.classList.add(ROOT_CLASS);
+  document.documentElement.classList.toggle(ADULT_ROOT_CLASS, isAdultHost());
+
   if (document.getElementById(STYLE_ID)) {
     return;
   }

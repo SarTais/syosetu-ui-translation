@@ -1,3 +1,5 @@
+import { enhanceDisplaySettings } from './features/displaySettings';
+import { linkKeywordBadges } from './features/keywordBadges';
 import { installStyles } from './features/styles';
 import { translateAttributes } from './features/translateAttributes';
 import { translateText } from './features/translateText';
@@ -13,6 +15,8 @@ function bootstrap(): void {
 bootstrap();
 
 function translatePage(root: ParentNode): void {
+  enhanceDisplaySettings(root);
+  linkKeywordBadges(root);
   translateText(root);
   translateAttributes(root);
 }
