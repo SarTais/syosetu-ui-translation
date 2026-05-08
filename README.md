@@ -125,6 +125,18 @@ npm.cmd run build:watch
 
 Leave it running while editing source files.
 
+Optional local date formatting can be configured with a `.env.local` file:
+
+```text
+VITE_SYOSETU_DATE_FORMAT=MM/DD/YYYY
+```
+
+The default is `MM/DD/YYYY`. Supported tokens are `YYYY`, `YY`, `MM` or `mm`, `M`, `DD` or `dd`, and `D`. For example:
+
+```text
+VITE_SYOSETU_DATE_FORMAT=mm.dd.YYYY
+```
+
 Type-check:
 
 ```bash
