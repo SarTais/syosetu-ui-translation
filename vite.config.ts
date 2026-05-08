@@ -2,6 +2,13 @@ import { defineConfig } from 'vite';
 import monkey from 'vite-plugin-monkey';
 
 export default defineConfig({
+  server: {
+    host: 'localhost',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Private-Network': 'true',
+    },
+  },
   plugins: [
     monkey({
       entry: 'src/main.ts',
@@ -13,7 +20,6 @@ export default defineConfig({
         description: 'Improves and translates Syosetu/Narou UI labels into English while preserving search behavior.',
         match: [
           'https://*.syosetu.com/*',
-          'https://syosetu.com/*',
         ],
         icon: 'https://www.google.com/s2/favicons?sz=64&domain=syosetu.com',
         'run-at': 'document-idle',

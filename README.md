@@ -17,7 +17,7 @@ The first version includes the project structure and the basic runtime pipeline:
 - style injection feature
 - debounced DOM observer for dynamic page updates
 
-The translation dictionaries are intentionally empty for now.
+The translation dictionaries are being migrated into modular source-key and locale files.
 
 ## Supported Sites
 
@@ -117,6 +117,14 @@ Run the Vite dev server:
 npm run dev
 ```
 
+Chrome may block the Vite userscript dev loader on live Syosetu pages because it tries to load from `localhost` or `127.0.0.1`. If that happens, use the watch build workflow instead:
+
+```bash
+npm.cmd run build:watch
+```
+
+Leave it running while editing source files.
+
 Type-check:
 
 ```bash
@@ -140,6 +148,31 @@ On Windows PowerShell, if script execution blocks `npm`, use:
 ```bash
 npm.cmd run build
 ```
+
+### Local Tampermonkey Wrapper
+
+For local testing, enable file access for Tampermonkey:
+
+1. Open `chrome://extensions/`.
+2. Open Tampermonkey details.
+3. Enable `Allow access to file URLs`.
+
+Then create a small wrapper script in Tampermonkey:
+
+```js
+// ==UserScript==
+// @name         Syosetu UI translations local
+// @namespace    https://github.com/SarTais/syosetu-ui-translation
+// @version      0.1.0-local
+// @description  Local wrapper for built Syosetu UI translations userscript.
+// @match        https://*.syosetu.com/*
+// @grant        none
+// @require      file:///C:/Path/To/syosetu-ui-translation/dist/syosetu-ui-translations.user.js
+// @run-at       document-idle
+// ==/UserScript==
+```
+
+Replace `C:/Path/To/syosetu-ui-translation` with your local checkout path. Run `npm.cmd run build:watch`, then reload the Syosetu page after rebuilds.
 
 ## Installation
 
