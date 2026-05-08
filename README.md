@@ -4,6 +4,12 @@ A TypeScript userscript project for translating UI text on Syosetu/Narou-related
 
 This repository is currently an early scaffold. The goal is to grow it into a modular userscript that builds to one installable `.user.js` file for Tampermonkey or Violentmonkey.
 
+## Purpose
+
+This userscript translates Syosetu UI labels without running full-page machine translation.
+
+The main reason is reliability: browser translators such as Google Translate can rewrite Syosetu markup, form values, links, and button text in ways that break site controls. This project keeps the original page behavior intact while localizing stable UI text, translated keyword labels, and helper controls.
+
 ## Current Scope
 
 The first version includes the project structure and the basic runtime pipeline:
