@@ -19,6 +19,18 @@ export const dynamic: readonly DynamicTranslationRule[] = [
     replacement: '>> Comments for episode $1',
   },
   {
+    pattern: /続きから読む（(.+?)）/g,
+    replacement: 'Continue reading ($1)',
+  },
+  {
+    pattern: /最終更新日\s*:\s*/g,
+    replacement: 'Last updated: ',
+  },
+  {
+    pattern: /連載中\s*\/\s*/g,
+    replacement: 'Ongoing / ',
+  },
+  {
     pattern: /エピソード(\d+)/g,
     replacement: 'Episode $1',
   },

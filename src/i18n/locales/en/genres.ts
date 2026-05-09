@@ -1,5 +1,6 @@
 export const genres: Record<string, string> = {
   'ハイファンタジー〔ファンタジー〕': 'High Fantasy [Fantasy]',
+  'ハイファンタジー[ファンタジー]': 'High Fantasy [Fantasy]',
   異世界: 'Isekai',
   現実世界: 'Real world',
   ハイファンタジー: 'High fantasy',
