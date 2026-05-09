@@ -2,6 +2,7 @@ import { enhanceDisplaySettings } from './features/displaySettings';
 import { linkKeywordBadges } from './features/keywordBadges';
 import { installStyles } from './features/styles';
 import { translateAttributes } from './features/translateAttributes';
+import { translateHomeHeader } from './features/translateHomeHeader';
 import { translateText } from './features/translateText';
 
 let translateTimer: ReturnType<typeof setTimeout> | undefined;
@@ -17,6 +18,7 @@ bootstrap();
 function translatePage(root: ParentNode): void {
   enhanceDisplaySettings(root);
   linkKeywordBadges(root);
+  translateHomeHeader(root);
   translateText(root);
   translateAttributes(root);
 }
