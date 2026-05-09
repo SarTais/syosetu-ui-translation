@@ -37,6 +37,8 @@ function installObserver(): void {
   });
 
   observer.observe(document.body, {
+    attributeFilter: ['aria-label', 'placeholder', 'value'],
+    attributes: true,
     childList: true,
     subtree: true,
     characterData: true,
