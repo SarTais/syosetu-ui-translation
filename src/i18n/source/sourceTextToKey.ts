@@ -167,6 +167,9 @@ export const sourceTextToKey = new Map<string, TranslationKey>([
   ['Xブックマークに追加', 'bookmark.addAdult'],
   ['ブックマークに追加しました', 'bookmark.added'],
   ['Xブックマークに追加しました', 'bookmark.addedAdult'],
+  ['ブックマーク設定変更', 'bookmark.changeSettings'],
+  ['ブックマークの設定を変更します', 'bookmark.changeSettingsMessage'],
+  ['ブックマークを解除', 'bookmark.remove'],
   ['設定', 'bookmark.settings'],
   ['更新通知', 'bookmark.updateNotifications'],
   ['公開', 'bookmark.public'],
@@ -181,6 +184,9 @@ export const sourceTextToKey = new Map<string, TranslationKey>([
   ['Xブックマークへ移動', 'bookmark.goToAdultBookmarks'],
   ['ブックマークを解除しました。', 'bookmark.removed'],
   ['Xブックマークを解除しました。', 'bookmark.removedAdult'],
+  ['お気に入りep', 'favoriteEpisode.shortLabel'],
+  ['お気に入りエピソード未登録', 'favoriteEpisode.notRegistered'],
+  ['お気に入りエピソードは登録されていません。', 'favoriteEpisode.none'],
 
   // Errors and notices
   ['エラー', 'notice.error'],

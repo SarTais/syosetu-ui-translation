@@ -167,6 +167,9 @@ export const ui: Record<TranslationKey, string> = {
   'bookmark.addAdult': 'Add to X bookmarks',
   'bookmark.added': 'Added to bookmarks',
   'bookmark.addedAdult': 'Added to X bookmarks',
+  'bookmark.changeSettings': 'Change bookmark settings',
+  'bookmark.changeSettingsMessage': 'Change bookmark settings',
+  'bookmark.remove': 'Remove bookmark',
   'bookmark.settings': 'Settings',
   'bookmark.updateNotifications': 'Update notifications',
   'bookmark.public': 'Public',
@@ -181,6 +184,9 @@ export const ui: Record<TranslationKey, string> = {
   'bookmark.goToAdultBookmarks': 'Go to X bookmarks',
   'bookmark.removed': 'Bookmark removed.',
   'bookmark.removedAdult': 'X bookmark removed.',
+  'favoriteEpisode.shortLabel': 'Favorite eps',
+  'favoriteEpisode.notRegistered': 'Favorite episode not registered',
+  'favoriteEpisode.none': 'No favorite episodes are registered.',
 
   // Errors and notices
   'notice.error': 'Error',

@@ -51,6 +51,14 @@ export const dynamic: readonly DynamicTranslationRule[] = [
     replacement: 'Page $1',
   },
   {
+    pattern: /カテゴリ(\d+)/g,
+    replacement: 'Category $1',
+  },
+  {
+    pattern: /(\d+)登録中（上限(\d+)）/g,
+    replacement: '$1 registered (limit $2)',
+  },
+  {
     pattern: /次のページ/g,
     replacement: 'Next page',
   },
@@ -97,6 +105,10 @@ export const dynamic: readonly DynamicTranslationRule[] = [
   {
     pattern: /(\d{1,4}[./-]\d{1,2}[./-]\d{1,4}\s+\d{1,2}:\d{2})\s*更新/g,
     replacement: '$1 Updated',
+  },
+  {
+    pattern: /(\d{1,4}[./-]\d{1,2}[./-]\d{1,4}\s+\d{1,2}:\d{2})\s*改稿/g,
+    replacement: '$1 Revised',
   },
   {
     pattern: /(\d{1,2})時\s*(\d{1,2})分/g,
