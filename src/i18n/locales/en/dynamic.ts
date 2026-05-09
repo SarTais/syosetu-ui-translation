@@ -31,6 +31,14 @@ export const dynamic: readonly DynamicTranslationRule[] = [
     replacement: 'Ongoing / ',
   },
   {
+    pattern: /この作品には/g,
+    replacement: 'This work contains',
+  },
+  {
+    pattern: /〔残酷描写〕が含まれています。/g,
+    replacement: '[graphic violence].',
+  },
+  {
     pattern: /半角英数字の両方を含む\s*8字以上32字以内で入力/g,
     replacement: 'Use 8-32 half-width alphanumeric characters, including both letters and numbers',
   },
