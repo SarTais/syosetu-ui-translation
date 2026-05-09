@@ -1,4 +1,4 @@
-import { getAttributeTranslationMap, getTranslationMap } from '../i18n/current';
+import { getAttributeTranslationMap, getTranslationMap, translateDynamicText } from '../i18n/current';
 import { setAttributeIfChanged } from '../utils/dom';
 
 const translations = getTranslationMap();
@@ -23,11 +23,18 @@ export function translateAttributes(root: ParentNode = document): void {
     }
   });
 
-  root.querySelectorAll('input[value]').forEach((el) => {
-    if (el.matches('.search_text,input[name="word"],input[name="notword"]')) {
-      return;
-    }
+  root.querySelectorAll('[title]').forEach((el) => {
+    const text = el.getAttribute('title');
+    const exact = text ? translations.get(text) : undefined;
+    const dynamic = text ? translateDynamicText(text) : undefined;
+    const translated = exact ?? (dynamic && dynamic !== text ? dynamic : undefined);
 
+    if (translated) {
+      setAttributeIfChanged(el, 'title', translated);
+    }
+  });
+
+  root.querySelectorAll('input[type="submit"][value], input[type="button"][value], input[type="reset"][value]').forEach((el) => {
     const value = el.getAttribute('value');
     const translated = value ? translations.get(value) : undefined;
 
