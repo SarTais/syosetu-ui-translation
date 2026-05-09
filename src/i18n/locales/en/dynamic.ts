@@ -31,6 +31,10 @@ export const dynamic: readonly DynamicTranslationRule[] = [
     replacement: 'Ongoing / ',
   },
   {
+    pattern: /半角英数字の両方を含む\s*8字以上32字以内で入力/g,
+    replacement: 'Use 8-32 half-width alphanumeric characters, including both letters and numbers',
+  },
+  {
     pattern: /エピソード(\d+)/g,
     replacement: 'Episode $1',
   },
@@ -40,6 +44,10 @@ export const dynamic: readonly DynamicTranslationRule[] = [
   },
   {
     pattern: /(\d{4})\.(\d{1,2})\.(\d{1,2})/g,
+    replacement: (_match, year, month, day) => formatConfiguredDate(year, month, day),
+  },
+  {
+    pattern: /(\d{4})-(\d{1,2})-(\d{1,2})/g,
     replacement: (_match, year, month, day) => formatConfiguredDate(year, month, day),
   },
   {

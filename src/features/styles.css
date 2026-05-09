@@ -64,6 +64,10 @@
   min-width: 180px;
 }
 
+.tm-syosetu-ui-translations .c-form__label--requied::after {
+  content: var(--tm-syosetu-required-label, "Required");
+}
+
 .tm-syosetu-ui-translations .tm-syosetu-original-illust-toggle {
   display: none !important;
 }

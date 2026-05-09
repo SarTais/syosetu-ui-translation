@@ -1,6 +1,9 @@
 import type { TranslationKey } from '../../source/translationKeys';
 
 export const ui: Record<TranslationKey, string> = {
+  // Common UI
+  'common.required': 'Required',
+
   // Novel info page
   'novelInfo.synopsis': 'Synopsis',
   'novelInfo.nCode': 'N-Code',
@@ -102,6 +105,7 @@ export const ui: Record<TranslationKey, string> = {
   'account.authorPage': 'Author page',
   'account.adultAuthorPage': 'Adult author page',
   'navigation.home': 'Home',
+  'navigation.userHome': 'User home',
   'navigation.firstTimeGuide': 'First time here?',
   'navigation.works': 'Novels',
   'navigation.users': 'Users',
@@ -293,4 +297,74 @@ export const ui: Record<TranslationKey, string> = {
   'sidebar.help': 'Help',
   'sidebar.aboutNCode': 'About N-Code',
   'footer.yomouSiteOutline': 'A reading site for novels posted on Narou',
+
+  // Registration
+  'registration.emailVerificationTitle': 'User registration [email verification]',
+  'registration.emailVerificationSentTitle': 'User registration [email verification sent]',
+  'registration.fullRegistrationTitle': 'User registration [full registration]',
+  'registration.confirmationTitle': 'User registration [confirmation]',
+  'registration.completeTitle': 'User registration [complete]',
+  'registration.stepEmailVerification': 'Email verification',
+  'registration.stepFullRegistration': 'Full registration',
+  'registration.stepConfirmation': 'Confirmation',
+  'registration.stepComplete': 'Registration complete',
+  'registration.fullRegistrationInstructions': 'Enter the following items and press User registration [confirmation].',
+  'registration.publicInfoSuffix': ' information will be visible on your My Page.',
+  'registration.userName': 'User name',
+  'registration.errorUserNameBlankOnly': 'Error: User name cannot contain only blank spaces',
+  'registration.max32Chars': 'Enter up to 32 characters',
+  'registration.furigana': 'Furigana',
+  'registration.max64Chars': 'Enter up to 64 characters',
+  'registration.emailAddress': 'Email address',
+  'registration.gender': 'Gender',
+  'registration.genderMale': 'Male',
+  'registration.genderFemale': 'Female',
+  'registration.genderUnselected': 'Not selected',
+  'registration.birthDate': 'Date of birth',
+  'registration.selectYear': 'Select year',
+  'registration.selectMonth': 'Select month',
+  'registration.selectDay': 'Select day',
+  'registration.allInfoEditable': 'All information can be changed later.',
+  'registration.genderBirthDatePrivacyEditable':
+    '"Gender" and "date of birth" can also be made public later in the visibility settings.',
+  'registration.questionsPrefix': 'If you have questions, see ',
+  'registration.confirmationInstructions': 'User registration will be completed with the following information. Please check that everything is correct.',
+  'registration.passwordHidden': '* Password is not shown',
+  'registration.finalPasswordInstructions':
+    'If the above information is correct, enter your password again and press User registration [complete].',
+  'registration.keepPasswordNotice': 'Please keep your password stored safely yourself.',
+  'registration.completionEmailNotice': 'After registration is complete, a confirmation email will be sent to the email address you entered.',
+  'registration.backToInput': 'Back to information input',
+  'registration.completeThanks': 'Thank you for registering. User registration is complete.',
+  'registration.completeEmailSent': 'A user registration completion email has been sent to the registered email address. Please check it.',
+  'registration.goToUserPageTop': 'Go to user home',
+  'registration.emailVerificationIntro': 'Email verification is required before registration.',
+  'registration.emailVerificationNextStep':
+    'After verification, complete registration from the address shown in the email sent to you.',
+  'registration.free': 'User registration is free.',
+  'registration.thanks': 'Thank you for using Narou.',
+  'registration.emailSent': 'A verification email has been sent.',
+  'registration.followEmailLink': 'When the verification email arrives, continue to full registration from the address in the email.',
+  'registration.emailDelayNotice':
+    'Depending on server or network conditions, email delivery may be delayed by several minutes to several hours.',
+  'registration.emailLabel': 'Enter the email address to register',
+  'registration.recaptchaHelp': 'Check the box below to prove this is not an automated registration.',
+  'registration.readTermsRequired': 'Please read them carefully',
+  'registration.agreeTerms': 'I agree to the terms of service and enter into the usage agreement',
+  'registration.submitEmailVerification': 'Send email verification',
+  'registration.emailNotReceivedPrefix': 'If the email does not arrive, see ',
+  'registration.seeArticleSuffix': ' for details.',
+  'registration.invalidEmailErrorPrefix': 'If you see the error "Invalid email address format", see ',
+  'registration.invalidAuthCodePrefix': 'If you see the error "Incorrect authentication code" on the full registration page, see ',
+  'registration.emailSystemNotice':
+    'Narou uses an email verification system to confirm that sender email addresses are valid.',
+  'registration.emailVerificationNotFullRegistration':
+    'Email verification is not full registration. After verification, complete registration from the address shown in the email sent to you.',
+  'registration.smartphoneEmailAllowed': 'You can also register with a smartphone email address.',
+  'registration.oneAccountNotice':
+    'Narou supports both computers and smartphones, and all services can be used with one account.',
+  'registration.allowSenderNotice':
+    'If you use email allow-list settings, make sure you can receive mail from "hinaproject.com".',
+  'registration.aboutRegistration': 'About user registration',
+  'registration.backToNarouTop': 'Back to Narou top',
 };
