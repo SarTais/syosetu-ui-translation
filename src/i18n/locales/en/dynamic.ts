@@ -39,6 +39,38 @@ export const dynamic: readonly DynamicTranslationRule[] = [
     replacement: 'Episode $1',
   },
   {
+    pattern: /(\d+)\s*ページ/g,
+    replacement: 'Page $1',
+  },
+  {
+    pattern: /次のページ/g,
+    replacement: 'Next page',
+  },
+  {
+    pattern: /最後のページ/g,
+    replacement: 'Last page',
+  },
+  {
+    pattern: /(\d+)\s*characters以上、\s*(\d+)\s*characters以内で入力/g,
+    replacement: 'Enter $1-$2 characters',
+  },
+  {
+    pattern: /(\d+)\s*文字以上、\s*(\d+)\s*文字以内で入力/g,
+    replacement: 'Enter $1-$2 characters',
+  },
+  {
+    pattern: /空白・改行含まない(\d+)\s*characters以上、\s*空白・改行含む(\d+)\s*characters以内で入力/g,
+    replacement: 'Enter at least $1 non-space/non-line-break characters and up to $2 characters including spaces and line breaks',
+  },
+  {
+    pattern: /空白・改行含まない(\d+)\s*文字以上、/g,
+    replacement: 'At least $1 non-space/non-line-break characters,',
+  },
+  {
+    pattern: /空白・改行含む(\d+)\s*文字以内で入力/g,
+    replacement: 'up to $1 characters including spaces and line breaks',
+  },
+  {
     pattern: /(\d{4})\/(\d{1,2})\/(\d{1,2})/g,
     replacement: (_match, year, month, day) => formatConfiguredDate(year, month, day),
   },
