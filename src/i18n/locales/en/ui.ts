@@ -92,6 +92,7 @@ export const ui: Record<TranslationKey, string> = {
   // Account and navigation
   'account.login': 'Log in',
   'account.logout': 'Log out',
+  'account.logoutInstruction': 'To log out, press the button below.',
   'account.userIdOrEmail': 'User ID or email address',
   'account.password': 'Password',
   'account.forgotPassword': 'Forgot your password?',
@@ -165,11 +166,19 @@ export const ui: Record<TranslationKey, string> = {
   'bookmark.removedAdult': 'Adult bookmark removed.',
 
   // Errors and notices
+  'notice.error': 'Error',
   'notice.errorOccurred': 'An error occurred',
   'notice.errorOccurredSentence': 'An error occurred.',
   'notice.errorHelpPrefix': 'If you do not know what caused the error, please check',
   'notice.errorHelpSuffix': '.',
   'notice.helpCenter': 'Help Center',
+  'notice.loginFailed': 'Login failed',
+  'notice.loginMissingUserIdOrEmail': 'Please enter your user ID or email address.',
+  'notice.loginCheckUserId': 'Please check your user ID.',
+  'notice.loginUseHalfWidthUserId': 'Is your user ID entered in full-width characters? Please enter it in half-width characters.',
+  'notice.loginCheckInput': 'Please check the information you entered.',
+  'notice.loginHelpArticle': 'the Help Center article about being unable to log in',
+  'notice.backToTopPage': 'Back to top page',
   'notice.warningHeading': '+Warning+',
   'notice.warning': 'Warning',
   'notice.under15Prefix': 'Users under 15 should ',

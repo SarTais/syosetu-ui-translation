@@ -94,6 +94,7 @@ export const sourceTextToKey = new Map<string, TranslationKey>([
   // Account and navigation
   ['ログイン', 'account.login'],
   ['ログアウト', 'account.logout'],
+  ['ログアウトする場合は以下のボタンを押してください。', 'account.logoutInstruction'],
   ['ユーザIDまたはメールアドレス', 'account.userIdOrEmail'],
   ['パスワード', 'account.password'],
   ['パスワードを忘れた方はこちら', 'account.forgotPassword'],
@@ -167,11 +168,20 @@ export const sourceTextToKey = new Map<string, TranslationKey>([
   ['Xブックマークを解除しました。', 'bookmark.removedAdult'],
 
   // Errors and notices
+  ['エラー', 'notice.error'],
   ['エラーが発生しました', 'notice.errorOccurred'],
   ['エラーが発生しました。', 'notice.errorOccurredSentence'],
   ['エラーの原因がわからない場合は', 'notice.errorHelpPrefix'],
+  ['エラーの原因が分からない場合は', 'notice.errorHelpPrefix'],
   ['をご確認ください。', 'notice.errorHelpSuffix'],
   ['ヘルプセンター', 'notice.helpCenter'],
+  ['ログインに失敗しました', 'notice.loginFailed'],
+  ['ユーザIDまたはメールアドレスを指定してください。', 'notice.loginMissingUserIdOrEmail'],
+  ['ユーザIDをご確認ください。', 'notice.loginCheckUserId'],
+  ['ユーザIDが全角入力になっていませんか？半角で入力してください。', 'notice.loginUseHalfWidthUserId'],
+  ['入力情報をご確認ください。', 'notice.loginCheckInput'],
+  ['ヘルプセンターのログインできなくなった場合についての記事', 'notice.loginHelpArticle'],
+  ['トップページへ戻る', 'notice.backToTopPage'],
   ['+注意+', 'notice.warningHeading'],
   ['警告', 'notice.warning'],
   ['15歳未満の方は', 'notice.under15Prefix'],
