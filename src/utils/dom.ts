@@ -28,5 +28,5 @@ export function isInsideNovelBody(node: Node): boolean {
 
 export function isIgnoredTextParent(node: Node): boolean {
   const parent = node.parentElement;
-  return Boolean(parent?.closest('script,style,noscript,textarea,select,option'));
+  return Boolean(parent?.closest('script,style,noscript,textarea'));
 }
