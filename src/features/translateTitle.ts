@@ -4,6 +4,8 @@ import type { TranslationKey } from '../i18n/source/translationKeys';
 const titleFragments: Array<[string, TranslationKey]> = [
   ['小説家になろう', 'navigation.narou'],
   ['小説を読もう！', 'navigation.yomou'],
+  ['Xユーザホーム', 'userHome.xUserHome'],
+  ['Xユーザページ', 'userHome.xUserPage'],
   ['ユーザホーム', 'navigation.userHome'],
   ['ユーザページ', 'userHome.userPage'],
   ['みんなのための小説投稿サイト', 'footer.siteOutline'],
