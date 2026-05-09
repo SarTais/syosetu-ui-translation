@@ -39,6 +39,10 @@ export const dynamic: readonly DynamicTranslationRule[] = [
     replacement: (_match, year, month, day) => formatConfiguredDate(year, month, day),
   },
   {
+    pattern: /(\d{4})\.(\d{1,2})\.(\d{1,2})/g,
+    replacement: (_match, year, month, day) => formatConfiguredDate(year, month, day),
+  },
+  {
     pattern: /(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/g,
     replacement: (_match, year, month, day) => formatConfiguredDate(year, month, day),
   },
